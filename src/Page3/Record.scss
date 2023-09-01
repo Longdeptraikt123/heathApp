@@ -1,0 +1,91 @@
+.record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+
+    .record_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        max-width: 960px;
+        position: relative;
+
+        .record_item {
+            border: 24px solid rgba(255, 204, 33, 1);
+            width: 288px;
+            height: 288px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            .record_img {
+                width: 240px;
+                height: 240px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    filter: brightness(0.35);
+                    background-blend-mode: luminosity;
+                }
+            }
+
+            .record_text {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                text-align: center;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    letter-spacing: 0.125px;
+                    color: rgba(255, 204, 33, 1);
+                    font-family: Inter;
+                }
+
+                span {
+                    width: 150px;
+                    height: 23px;
+                    background: rgba(255, 150, 60, 1);
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 20px;
+                    letter-spacing: 0px;
+                    color: #fff;
+                    padding: 2px;
+                    font-family: Hiragino Kaku Gothic Pro;
+                    overflow: hidden;
+
+                }
+            }
+        }
+    }
+
+    @media (max-width:960px) {
+        .record_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width:650px) {
+        .record_wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

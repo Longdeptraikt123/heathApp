@@ -1,0 +1,129 @@
+.home {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 312px;
+    background-color: rgba(46, 46, 46, 1);
+
+    .home_photo {
+        flex: 1;
+        position: relative;
+        z-index: 0;
+        height: 312px;
+        width: 100%;
+        overflow-y: hidden;
+
+        .home_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            width: 181px;
+            height: 181px;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0px 0px 6px 0px rgba(252, 116, 0, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 5px;
+            overflow: hidden;
+
+
+            span {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 22px;
+                letter-spacing: 0px;
+                text-align: center;
+                color: #fff;
+                position: relative;
+            }
+
+            h2 {
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0px;
+                text-align: center;
+                color: #fff;
+                position: relative;
+            }
+
+            span::before,
+            h2::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                box-shadow: 0px 0px 6px 0px rgba(252, 116, 0, 1);
+                z-index: -1;
+                transform: skew(-20deg);
+                filter: blur(10px);
+            }
+
+
+        }
+
+    }
+
+    .home_graph {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .home_graph-wrapper {
+            width: 589px;
+            height: 294px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    }
+
+    @media (max-width:750px) {
+        .home_photo {
+            flex: 1;
+        }
+
+        .home_graph {
+            flex: 1;
+
+            .home_graph-wrapper {
+                width: 589px;
+                height: 294px;
+
+                #graph {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:550px) {
+        .home_graph {
+            flex: 1;
+            display: none;
+
+            .home_graph-wrapper {
+                width: 100%;
+                height: 350px;
+
+                #graph {
+                    width: 700px;
+                    height: 500px;
+                }
+            }
+        }
+    }
+}

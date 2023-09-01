@@ -1,0 +1,158 @@
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    flex-direction: column;
+
+    .grid_wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 960px;
+        place-items: center;
+        gap: 5rem 2.8rem;
+
+        .grid_item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 234px;
+            max-height: 222px;
+            overflow-y: hidden;
+
+            .grid_image {
+                width: 100%;
+                position: relative;
+                overflow-y: hidden;
+
+                .grid_text {
+                    width: 144px;
+                    height: 24px;
+                    background: rgba(255, 204, 33, 1);
+                    position: absolute;
+                    transform: translate(0px, -40px);
+                    text-align: center;
+
+                    span {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        color: #fff;
+                        font-family: Inter;
+
+                    }
+                }
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 22px;
+                letter-spacing: 0.076px;
+                text-align: left;
+                color: rgba(65, 65, 65, 1);
+                margin: 5px 0;
+                font-family: Hiragino Kaku Gothic Pro;
+                overflow-y: hidden;
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 22px;
+                letter-spacing: 0.06px;
+                text-align: left;
+                color: rgba(255, 150, 60, 1);
+                margin: 2px 0;
+                font-family: Hiragino Kaku Gothic Pro;
+
+            }
+        }
+    }
+
+    .grid_btn {
+        margin-top: 2rem;
+
+        button {
+            width: 296px;
+            height: 56px;
+            background: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0px;
+            text-align: center;
+            color: #fff;
+            font-family: Hiragino Kaku Gothic Pro;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .grid_scroll {
+        position: absolute;
+        bottom: -13%;
+        right: 8%;
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(119, 119, 119, 1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 150, 60, 1);
+            border: none;
+
+            .grid_icon {
+                color: #fff;
+                font-size: 23px;
+            }
+        }
+
+        .grid_icon {
+            color: rgba(119, 119, 119, 1);
+            font-size: 23px;
+            transition: 0.2s ease;
+
+
+        }
+    }
+
+    @media (max-width:960px) {
+        .grid_wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 960px;
+            gap: 5rem 2.8rem;
+        }
+    }
+
+    @media (max-width:912px) {
+        .grid_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 960px;
+            gap: 1rem 0rem;
+        }
+    }
+
+    @media (max-width:720px) {
+        .grid_wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 960px;
+            gap: 1rem 0rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.hex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+    width: 100%;
+
+    .hex_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 130px;
+        height: 136px;
+        background: linear-gradient(155.89deg, #FFCC21 8.26%, #FF963C 91.18%);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+        .hex_icon {
+            width: 56px;
+            height: 56px;
+            color: #fff;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0px;
+            color: #fff;
+            text-align: center;
+            font-family: Inter;
+        }
+    }
+
+    @media (max-width:750px) {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        padding: 2rem;
+        width: 100%;
+    }
+}

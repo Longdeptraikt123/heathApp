@@ -1,0 +1,76 @@
+.rec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rec_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        max-width: 960px;
+        margin-top: 4rem;
+
+        .rec_item {
+            width: 216px;
+            height: 144px;
+            background: rgba(46, 46, 46, 1);
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+
+            h2 {
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 27px;
+                letter-spacing: 0.11px;
+                text-align: center;
+                color: rgba(255, 204, 33, 1);
+                font-family: Inter;
+            }
+
+            hr {
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                width: 56px;
+
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0px;
+                text-align: center;
+                color: #fff;
+                font-family: Hiragino Kaku Gothic Pro;
+
+            }
+        }
+    }
+
+    @media (max-width:965px) {
+        .rec_wrapper {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width:815px) {
+        .rec_wrapper {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width:515px) {
+        .rec_wrapper {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

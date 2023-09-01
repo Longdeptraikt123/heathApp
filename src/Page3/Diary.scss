@@ -1,0 +1,121 @@
+.diary {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .diary_wrapper {
+        .diary_heading {
+            margin-bottom: 10px;
+
+            span {
+                font-family: Inter;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 27px;
+                letter-spacing: 0.11;
+                text-align: left;
+                color: rgba(65, 65, 65, 1);
+            }
+        }
+
+        .diary_grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+
+            .diary_item {
+                width: 231px;
+                height: 231px;
+                padding: 10px;
+                border: 2px solid rgba(112, 112, 112, 1);
+                background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+                    linear-gradient(0deg, #707070, #707070);
+
+                .diary_item-time {
+                    margin-bottom: 10px;
+
+                    p {
+                        font-family: Inter;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        letter-spacing: 0.09000000357627869px;
+                        text-align: left;
+                    }
+
+                }
+
+                .diary_item-text {
+                    span {
+                        font-family: Hiragino Kaku Gothic Pro;
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 17px;
+                        letter-spacing: 0.05999999865889549px;
+                        text-align: left;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .diary_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        button {
+            width: 296px;
+            height: 56px;
+            background: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0px;
+            text-align: center;
+            color: #fff;
+            font-family: Hiragino Kaku Gothic Pro;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width:950px) {
+        .diary_wrapper {
+            .diary_grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+        }
+    }
+
+    @media (max-width:750px) {
+        .diary_wrapper {
+            .diary_grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+    }
+
+    @media (max-width:500px) {
+        .diary_wrapper {
+            .diary_grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                place-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}
